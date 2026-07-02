@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D1B2A"
+    tools:context=".ui.SellGame">
+
+
+    <LinearLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0D1B2A"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:context=".ui.Login">
+
+
+        <!-- Título -->
+        <ImageView
+            android:id="@+id/etVenderJuego"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="1.0"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-5dp"
+            android:fontFamily="monospace"
+            android:text="Vender Juego"
+            android:textColor="#00FFD1"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/gameTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/edittext_background"
+            android:backgroundTint="#1E2A3A"
+            android:hint="Título del juego"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+
+        <Spinner
+            android:id="@+id/spinnerEstadoJuego"
+            android:layout_width="280dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="32dp"
+            android:entries="@array/gameState"
+            android:background="@drawable/edittext_background"
+            android:backgroundTint="#1E2A3A"
+            android:padding="12dp"
+            android:textColor = "@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinnerPlataformaJuego"
+            android:layout_width="360dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="12dp"
+            android:entries="@array/gamePlatform"
+            android:background="@drawable/edittext_background"
+            android:backgroundTint="#1E2A3A"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/sellPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_background"
+            android:backgroundTint="#1E2A3A"
+            android:hint="Precio de venta"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnSelectImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:layout_marginTop="10dp"
+                android:text="Seleccionar imagen"
+                android:textColor="@color/white" />
+
+            <!-- Estado de conservación con ícono de información
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Estado de conservación"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" /> -->
+
+            <ImageView
+                android:id="@+id/ivSelectedImage"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvFileName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="kni...url"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/edittext_background"
+            android:backgroundTint="#1E2A3A"
+            android:hint="Descripción"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/sellGame"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="monospace"
+            android:text="PONER A LA VENTA"
+            android:textAllCaps="false"
+            android:theme="@style/Widget.App.RoundedButton"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#0B1724"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Icono lupa (buscador activo) -->
+        <ImageButton
+            android:id="@+id/search"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bottom_icon_bg"
+            android:gravity="center"
+            android:onClick="launchSearchGames"
+            android:src="@drawable/search_no"></ImageButton>
+
+        <!-- Icono compras -->
+        <ImageButton
+            android:id="@+id/sell"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bottom_icon_bg"
+            android:gravity="center"
+            android:src="@drawable/sell_yes"></ImageButton>
+
+        <!-- Icono perfil -->
+        <ImageButton
+            android:id="@+id/profile"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bottom_icon_bg"
+            android:gravity="center"
+            android:onClick="launchProfile"
+            android:src="@drawable/user_no"></ImageButton>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

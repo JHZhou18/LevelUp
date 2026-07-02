@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:background="#0D1B2A"
+    tools:context=".ui.SearchGames">
+
+    <!-- Icono superior izquierda -->
+
+    <!-- Icono de carrito -->
+
+    <ImageView
+        android:id="@+id/iconLogo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        />
+
+    <ImageView
+        android:id="@+id/iconCart"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/cart"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleExplorar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Explorar juegos"
+        android:textColor="#00FFD1"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/iconLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/platform_spinner_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="6dp">
+
+        <Spinner
+            android:id="@+id/spinnerCategoria"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edittext_background_round"
+            android:backgroundTint="#1E2A3A"
+            android:entries="@array/gamePlatform"
+            android:padding="4dp"
+            android:spinnerMode="dropdown"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerShoppingCart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/platform_spinner_layout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#0B1724"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Icono lupa (buscador activo) -->
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bottom_icon_bg"
+            android:gravity="center"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/search_yes">
+        </ImageButton>
+
+        <!-- Icono compras -->
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bottom_icon_bg"
+            android:gravity="center"
+            android:onClick="launchSellGames"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/sell_no">
+        </ImageButton>
+
+        <!-- Icono perfil -->
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bottom_icon_bg"
+            android:onClick="launchProfile"
+            android:gravity="center"
+            android:src="@drawable/user_no">
+        </ImageButton>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleExplorar">
+
+        <EditText
+            android:id="@+id/etBuscar"
+            android:layout_width="230dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/edittext_background_round"
+            android:backgroundTint="#1E2A3A"
+            android:hint="Buscar juego..."
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <Button
+                android:id="@+id/btnFiltroPrecio"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/circle_filter"
+                android:backgroundTint="#1E2A3A"
+                android:padding="4dp"
+                android:text="💰"
+                android:textColor="#B166FF"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnFiltroEstado"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnFiltroEstado"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/circle_filter"
+                android:backgroundTint="#1E2A3A"
+                android:padding="4dp"
+                android:text="⭐"
+                android:textColor="#B166FF"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.827"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

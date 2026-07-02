@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="#0D1B2A">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/etProfile"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="1.0"
+            android:src="@drawable/logo" />
+
+        <!-- Título principal -->
+
+        <!-- Línea divisoria -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="Bienvenido a
+                          Fernando Fernández"
+            android:textColor="@color/white"
+            android:textSize="28dp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="16dp"
+            android:background="#CCCCCC" />
+
+        <!-- Subtítulo -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="Ventas y devoluciones de
+                                este mes"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <!-- Total Ventas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total Ventas:"
+                android:textColor="@color/white"
+                android:textSize="11dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="857 (100 último mes)"
+                android:textColor="@color/white"
+                android:textSize="11dp" />
+        </LinearLayout>
+
+        <!-- Total Devoluciones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total devoluciones:"
+                android:textColor="@color/white"
+                android:textSize="11dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="85 (25 último mes)"
+                android:textColor="@color/white"
+                android:textSize="11dp" />
+        </LinearLayout>
+
+        <!-- Porcentaje ventas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="Porcentaje ventas:"
+                android:textColor="@color/white"
+                android:textSize="11dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="90% (75% último mes)"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- Rating como vendedor -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:text="   Rating como vendedor:"
+                android:textColor="@color/white"
+                android:textSize="11dp" />
+
+            <LinearLayout
+                android:id="@+id/heartLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/heart_full"
+                    app:tint="#B166FF" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/heart_full"
+                    app:tint="#B166FF" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/heart_full"
+                    app:tint="#B166FF" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Línea divisoria -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="16dp"
+            android:background="#CCCCCC" />
+
+        <!-- Compras totales -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Compras totales:"
+                android:textColor="@color/white"
+                android:textSize="11dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="125 (13 último mes)"
+                android:textColor="@color/white"
+                android:textSize="11dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/cerrarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="60dp"
+            android:onClick="launchIndex"
+            android:fontFamily="monospace"
+            android:text="CERRAR SESIÓN"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:theme="@style/Widget.App.RoundedButton"/>
+
+        <!-- Botón Poner a la venta -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="#0B1724"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Icono lupa (buscador activo) -->
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bottom_icon_bg"
+            android:gravity="center"
+            android:onClick="launchSearchGames"
+            android:src="@drawable/search_no"></ImageButton>
+
+        <!-- Icono compras -->
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bottom_icon_bg"
+            android:gravity="center"
+            android:onClick="launchSellGames"
+            android:src="@drawable/sell_no"></ImageButton>
+
+        <!-- Icono perfil -->
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bottom_icon_bg"
+            android:gravity="center"
+            android:src="@drawable/user_yes"></ImageButton>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

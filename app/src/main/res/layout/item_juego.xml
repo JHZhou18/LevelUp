@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#142C47"
+    android:layout_marginTop="8dp"
+    android:gravity="center_vertical"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:clipToOutline="true"
+    android:backgroundTint="#142C47">
+
+    <ImageView
+        android:id="@+id/ivImagen"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/logo" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del juego"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvPlataforma"
+            android:text="PC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#B166FF"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <ImageView android:id="@+id/ivHeart1" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/heart_nofull"/>
+            <ImageView android:id="@+id/ivHeart2" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/heart_nofull"/>
+            <ImageView android:id="@+id/ivHeart3" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/heart_nofull"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPrecio"
+        android:text="20 $"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#00FFD1"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginStart="8dp"/>
+</LinearLayout>

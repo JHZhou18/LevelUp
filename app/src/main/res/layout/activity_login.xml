@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D1B2A"
+    tools:context=".ui.Login">
+
+    <LinearLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#0D1B2A"
+        android:padding="24dp"
+        tools:context=".LoginActivity">
+
+        <!-- Botón atrás -->
+        <ImageButton
+            android:id="@+id/backButton"
+            android:src="@drawable/arrow_back"
+            android:layout_width="48dp"
+            android:onClick="launchIndex"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:layout_gravity="start"
+            android:contentDescription="Volver" />
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Acceder"
+            android:textColor="#00FFD1"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:fontFamily="monospace"/>
+
+        <!-- Campo correo -->
+
+        <!-- Campo contraseña -->
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#1E2A3A"
+            android:background="@drawable/edittext_background"
+            android:hint="Correo electrónico"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:background="@drawable/edittext_background"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:inputType="textPassword"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#1E2A3A"
+            android:padding="12dp" />
+
+        <!-- Botón Acceder -->
+        <Button
+            android:id="@+id/sellGame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ACCEDER"
+            android:onClick="iniciarSesion"
+            android:textStyle="bold"
+            android:theme="@style/Widget.App.RoundedButton"
+            android:textAllCaps="false"
+            android:layout_marginTop="24dp"
+            android:textColor="#000000"
+            android:fontFamily="monospace" />
+
+
+        <!-- Frases motivacionales -->
+        <TextView
+            android:id="@+id/phrase1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="En un mundo en el que cada nivel es diferente..."
+            android:textColor="#B166FF"
+            android:textSize="16sp"
+            android:fontFamily="monospace"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center" />
+
+        <!-- Icono del mando -->
+
+        <TextView
+            android:id="@+id/phrase2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="40dp"
+            android:fontFamily="monospace"
+            android:text="solo tú puedes marcar la diferencia"
+            android:textColor="#00FFD1"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/etVenderJuego"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/logo" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

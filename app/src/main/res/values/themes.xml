@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.VideojuegosFull" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+        <!-- 🔤 Fuente global -->
+        <item name="android:fontFamily">@font/bigblue_term_plus_nerd_font_regular</item>
+        <item name="fontFamily">@font/bigblue_term_plus_nerd_font_regular</item>
+
+    </style>
+
+    <!-- res/values/themes.xml -->
+    <style name="Widget.App.RoundedButton" parent="Widget.MaterialComponents.Button">
+        <!-- Asignamos el selector de color -->
+        <item name="android:backgroundTint">@color/button_color_selector</item>
+
+        <!-- APLICAMOS LA FORMA REDONDEADA USANDO LA REFERENCIA AL ESTILO -->
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.App.Button.Rounded</item>
+
+        <!-- Estilo del texto y del efecto ripple -->
+        <item name="android:textColor">@color/black</item>
+        <item name="rippleColor">#B166FF</item>
+    </style>
+
+
+    <!-- Estilo que define la forma con esquinas redondeadas -->
+    <style name="ShapeAppearance.App.Button.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50dp</item>
+    </style>
+</resources>

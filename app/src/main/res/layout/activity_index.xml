@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D1B2A"
+    tools:context=".ui.Index">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"/>
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LevelUp"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#00FFD1"
+        app:layout_constraintTop_toBottomOf="@id/appLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Subtítulo -->
+    <TextView
+        android:id="@+id/subTitleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="El próximo nivel está en tus manos"
+        android:textColor="#B166FF"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleText" />
+
+    <!-- Carrusel de juegos (RecyclerView horizontal) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerGames"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/subTitleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"/>
+
+    <!-- Botón Acceder -->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="launchLogIn"
+        android:text="ACCEDER"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:theme="@style/Widget.App.RoundedButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerGames" />
+
+    <!-- Botón Registrarse -->
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="REGISTRARSE"
+        android:textAllCaps="false"
+        android:onClick="launchRegister1"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:theme="@style/Widget.App.RoundedButton" />
+
+    <!-- Texto legal -->
+    <TextView
+        android:id="@+id/legalText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D1B2A"
+    tools:context=".ui.RegisterStep2Activity">
+
+    <!-- Flecha de regreso -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/arrow_back"
+        android:onClick="launchRegister1"
+        android:contentDescription="Volver"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"/>
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrarse"
+        android:textColor="#00FFD1"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"/>
+
+    <!-- Corazones -->
+    <LinearLayout
+        android:id="@+id/heartLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/heart_full"
+            app:tint="#B166FF" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/heart_full"
+            app:tint="#B166FF" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/heart_nofull"
+            app:tint="#2D2D2D" />
+    </LinearLayout>
+
+    <!-- Subtítulo -->
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Datos de acceso"
+        android:textColor="#00FFD1"
+        android:textStyle="italic"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/heartLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"/>
+
+    <!-- Correo electrónico -->
+    <EditText
+        android:id="@+id/etCorreo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Correo electrónico"
+        android:backgroundTint="#1E2A3A"
+        android:background="@drawable/edittext_background"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:padding="12dp"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+
+    <!-- Contraseña -->
+    <EditText
+        android:id="@+id/etContrasena"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:backgroundTint="#1E2A3A"
+        android:background="@drawable/edittext_background"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:padding="12dp"
+        android:inputType="textPassword"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/etCorreo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+
+    <!-- Verificar Contraseña -->
+    <EditText
+        android:id="@+id/etVerificarContrasena"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Verifique la contraseña"
+        android:backgroundTint="#1E2A3A"
+        android:background="@drawable/edittext_background"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:padding="12dp"
+        android:inputType="textPassword"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/etContrasena"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+
+    <!-- Botón Siguiente -->
+    <Button
+        android:id="@+id/btnSiguiente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="SIGUIENTE"
+        android:onClick="launchRegister3"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:fontFamily="monospace"
+        android:theme="@style/Widget.App.RoundedButton"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/etVerificarContrasena"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+
+    <!-- Logo inferior -->
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

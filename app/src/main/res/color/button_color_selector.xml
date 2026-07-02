@@ -1,0 +1,8 @@
+<!-- res/color/button_color_selector.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Estado: Pulsado -->
+    <item android:color="#B166FF" android:state_pressed="true" />
+
+    <!-- Estado: Por defecto (no pulsado) -->
+    <item android:color="#00FFD1" />
+</selector>
